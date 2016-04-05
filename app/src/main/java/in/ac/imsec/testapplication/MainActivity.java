@@ -46,8 +46,9 @@ public class MainActivity extends AppCompatActivity {
                     editor.putString("password",passwordText);
                     editor.apply();
 
-
                     Intent intent = new Intent(MainActivity.this,HomePage.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
                 }
             }
